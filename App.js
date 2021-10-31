@@ -11,7 +11,7 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Home"
+        initialRouteName="Details"
         screenOptions={{
           title: 'Test',
           headerStyle: styles.optinHeaderStyle,
@@ -27,9 +27,7 @@ function App() {
         <Stack.Screen
           name="Details"
           component={DetailsScreen}
-          options={{
-            title: 'Details Page',
-          }}
+          initialParams={{itemId: 42}}
         />
       </Stack.Navigator>
     </NavigationContainer>

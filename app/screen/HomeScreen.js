@@ -7,7 +7,13 @@ const HomeScreen = ({navigation}) => {
       <Text style={styles.text}>Home Screen</Text>
       <Button
         title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
+        onPress={() => {
+          /* 1. Navigate to the Details route with params */
+          navigation.navigate('Details', {
+            itemId: 86,
+            otherParam: 'anything you want here',
+          });
+        }}
       />
     </View>
   );
